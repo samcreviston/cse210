@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-class Activity
+class Exercise
 {
     private DateTime date;
     private int lengthInMinutes;
@@ -39,7 +39,7 @@ class Activity
     }
 }
 
-class Running : Activity
+class Running : Exercise
 {
     private double distance;
 
@@ -70,7 +70,7 @@ class Running : Activity
     }
 }
 
-class Cycling : Activity
+class Cycling : Exercise
 {
     private double speed;
 
@@ -101,7 +101,7 @@ class Cycling : Activity
     }
 }
 
-class Swimming : Activity
+class Swimming : Exercise
 {
     private int laps;
 
@@ -151,12 +151,12 @@ class Program
         swimming.LengthInMinutes = 86;
         swimming.Laps = 40;
 
-        List<Activity> activities = new List<Activity>();
+        List<Exercise> activities = new List<Exercise>();
         activities.Add(running);
         activities.Add(cycling);
         activities.Add(swimming);
 
-        foreach (Activity activity in activities)
+        foreach (Exercise activity in activities)
         {
             Console.WriteLine(activity.GetSummary());
             Console.WriteLine();
